@@ -1,0 +1,62 @@
+{
+  "id": "content_index",
+  "type": "SharedSlice",
+  "name": "ContentIndex",
+  "description": "ContentIndex",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "header": {
+          "type": "Text",
+          "config": {
+            "label": "header",
+            "placeholder": ""
+          }
+        },
+        "content_type": {
+          "type": "Select",
+          "config": {
+            "label": "content type",
+            "placeholder": "",
+            "options": [
+              "blog",
+              "projects"
+            ],
+            "default_value": "blog"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link text",
+            "placeholder": ""
+          }
+        },
+        "fallback_image": {
+          "type": "Image",
+          "config": {
+            "label": "fallback image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

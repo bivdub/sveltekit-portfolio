@@ -1,0 +1,91 @@
+{
+	"format": "custom",
+	"id": "settings",
+	"label": "Settings",
+	"repeatable": false,
+	"status": true,
+	"json": {
+		"Main": {
+			"name": {
+				"type": "Text",
+				"config": {
+					"label": "Name",
+					"placeholder": ""
+				}
+			},
+			"links": {
+				"type": "Group",
+				"config": {
+					"label": "Links",
+					"repeat": true,
+					"fields": {
+						"label": {
+							"type": "Text",
+							"config": {
+								"label": "Label",
+								"placeholder": ""
+							}
+						},
+						"link": {
+							"type": "Link",
+							"config": {
+								"label": "Link",
+								"placeholder": "",
+								"select": null,
+								"allowTargetBlank": true,
+								"allowText": true,
+								"repeat": false
+							}
+						}
+					}
+				}
+			},
+			"github_link": {
+				"type": "Link",
+				"config": {
+					"label": "Github Link",
+					"placeholder": "",
+					"select": null,
+					"allowTargetBlank": true,
+					"allowText": true,
+					"repeat": false
+				}
+			},
+			"linkedin_link": {
+				"type": "Link",
+				"config": {
+					"label": "Linkedin Link",
+					"placeholder": "",
+					"select": null,
+					"allowTargetBlank": true,
+					"allowText": true,
+					"repeat": false
+				}
+			}
+		},
+		"Meta": {
+			"meta_name": {
+				"type": "Text",
+				"config": {
+					"label": "Meta Name",
+					"placeholder": ""
+				}
+			},
+			"meta_description": {
+				"type": "Text",
+				"config": {
+					"label": "Meta Description",
+					"placeholder": ""
+				}
+			},
+			"meta_image": {
+				"type": "Image",
+				"config": {
+					"label": "Meta Image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			}
+		}
+	}
+}

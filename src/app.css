@@ -2,15 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--crt-red: rgb(218, 49, 49);
+	--crt-green: rgb(112, 159, 115);
+	--crt-blue: rgb(40, 129, 206);
+	--site-green: #42b883;
+	--site-grurple: #678abd;
+	--site-purple: #8b5cf6;
+	--site-plue: #628df7;
+	--site-blue: #38bdf8;
+	--site-bleen: #3dbbbe;
+}
+
 body {
-	font-family: 'Outfit Variable', sans-serif;
+	font-family: 'Anybody Variable', sans-serif;
 }
 
 .background-gradient {
-	background: radial-gradient(
-		circle at top center,
-		hsla(222, 80%, 60%, 0.5) 0%,
-		hsla(222, 0%, 0%, 0) 50%,
-		hsla(222, 0%, 0%, 0) 100%
-	);
+	position: fixed;
+	background: radial-gradient(circle at right 30%, var(--site-green), transparent 50%),
+		radial-gradient(circle at left 50%, var(--site-purple), transparent 65%),
+		radial-gradient(circle at center bottom, var(--site-blue), transparent 55%);
+}
+
+.crt {
+	background-color: rgb(25, 25, 30);
+	text-shadow:
+		0 0 0.2em currentColor,
+		1px 1px rgba(255, 0, 255, 0.5),
+		-1px -1px rgba(0, 255, 255, 0.4);
+	position: relative;
+	&:before,
+	&:after {
+		content: '';
+		transform: translateZ(0);
+		pointer-events: none;
+		opacity: 0.5;
+		mix-blend-mode: overlay;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	&:before {
+		background: repeating-linear-gradient(
+			var(--crt-red) 0px,
+			var(--crt-green) 2px,
+			var(--crt-blue) 4px
+		);
+	}
+	&:after {
+		background: repeating-linear-gradient(
+			90deg,
+			var(--crt-red) 1px,
+			var(--crt-green) 2px,
+			var(--crt-blue) 3px
+		);
+	}
 }

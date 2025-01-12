@@ -223,6 +223,16 @@
   dependencies:
     levn "^0.4.1"
 
+"@fontsource-variable/anybody@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/anybody/-/anybody-5.1.1.tgz#3db61c5520abf0a398fa37df5a4908de81f22478"
+  integrity sha512-xsJYf9V0uA6lSp+4iuF6kV+ul31yHDUHkLMQl4OKaHDUeY2mzjXxANo3NkCgKpKYkuNAn7aJd55+/R2oTsEVRg==
+
+"@fontsource-variable/comfortaa@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/comfortaa/-/comfortaa-5.1.1.tgz#9215bb534734f49491a5f68ec7f09e5d2eff88f0"
+  integrity sha512-ZuwxmA5ccVvTwl1bByhVHyxbROtg0Lk/cCB+f41LgKB/9dUAPj8wFFxN+oCWy702tsnzORtL86aSX6VVMYt12g==
+
 "@fontsource-variable/outfit@^5.1.1":
   version "5.1.1"
   resolved "https://registry.npmjs.org/@fontsource-variable/outfit/-/outfit-5.1.1.tgz"

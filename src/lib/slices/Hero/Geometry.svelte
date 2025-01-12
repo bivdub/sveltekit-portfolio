@@ -7,6 +7,7 @@
 	import tailwindConfig from '../../../../tailwind.config.js'; // Your Tailwind config file
 	import { elasticOut } from 'svelte/easing';
 	import { ThreeMFLoader } from 'three/examples/jsm/Addons.js';
+	import { onMount } from 'svelte';
 
 	const fullConfig = resolveConfig(tailwindConfig);
 	const twColors = fullConfig.theme.colors;
@@ -92,14 +93,21 @@
 			delay: gsap.utils.random(0, 500)
 		};
 	});
+
+	let reducedMotionRate = $state(0.5);
+
+	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		reducedMotionRate = prefersReducedMotion ? 0 : 1;
+	});
 </script>
 
 <Threlte.Group position={position.map((p) => p * 2)}>
 	<Float
-		speed={5 * rate}
-		rotationSpeed={5 * rate}
-		rotationIntensity={6 * rate}
-		floatIntensity={5 * rate}
+		speed={5 * rate * reducedMotionRate}
+		rotationSpeed={5 * rate * reducedMotionRate}
+		rotationIntensity={6 * rate * reducedMotionRate}
+		floatIntensity={5 * rate * reducedMotionRate}
 	>
 		<Threlte.Mesh
 			{geometry}

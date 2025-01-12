@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import '@fontsource-variable/outfit';
+	import '@fontsource-variable/anybody';
+	import '@fontsource-variable/comfortaa';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';

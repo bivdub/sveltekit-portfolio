@@ -37,12 +37,12 @@
 			'.tech-row',
 			{
 				x: (index) => {
-					return index % 2 === 0 ? gsap.utils.random(600, 400) : gsap.utils.random(-600, -400);
+					return index % 2 === 0 ? gsap.utils.random(400, 200) : gsap.utils.random(-400, -200);
 				}
 			},
 			{
 				x: (index) => {
-					return index % 2 === 0 ? gsap.utils.random(-600, -400) : gsap.utils.random(600, 400);
+					return index % 2 === 0 ? gsap.utils.random(-400, -200) : gsap.utils.random(400, 200);
 				},
 				ease: 'power1.inOut'
 			}
@@ -57,7 +57,7 @@
 	bind:this={component}
 >
 	<Bounded as="div">
-		<Heading size-xl class="mb-8" tag="h2">
+		<Heading size="xl" class="mb-8" tag="h2" gradient={true}>
 			{slice.primary.header}
 		</Heading>
 	</Bounded>

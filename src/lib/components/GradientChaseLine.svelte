@@ -22,8 +22,6 @@
 				color1 = colors[Math.floor(Math.random() * colors.length)];
 				color2 = colors[Math.floor(Math.random() * colors.length)];
 
-				console.log(svgRef.getElementsByClassName('gradient'));
-
 				gsap.to(svgRef.getElementsByClassName('gradient')[0], {
 					attr: { x1: '100%', x2: '120%' },
 					repeat: -1,
@@ -34,8 +32,7 @@
 						color2 = colors[Math.floor(Math.random() * colors.length)];
 					},
 					delay: gsap.utils.random(0, 1.5),
-					repeatDelay: gsap.utils.random(0, 1),
-					reversed: gsap.utils.random(0, 10, 1) < 3 ? true : false
+					repeatDelay: gsap.utils.random(0, 1)
 				});
 
 				return () => {

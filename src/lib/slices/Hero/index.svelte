@@ -31,7 +31,7 @@
 		</div>
 		<div class="mt-8 flex justify-center md:mt-12">
 			<span
-				class="block bg-gradient-to-tr from-black via-slate-700 to-black bg-clip-text text-2xl font-extrabold uppercase tracking-[.2em] text-transparent md:text-4xl"
+				class="block text-center text-2xl font-extrabold uppercase tracking-[.2em] text-slate-300 md:text-5xl"
 			>
 				{slice.primary.tag_line}
 			</span>

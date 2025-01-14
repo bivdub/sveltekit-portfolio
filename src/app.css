@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-	--crt-red: rgb(218, 49, 49);
+	--crt-red: rgb(218, 47, 47);
 	--crt-green: rgb(112, 159, 115);
 	--crt-blue: rgb(40, 129, 206);
 	--site-green: #42b883;
@@ -15,7 +15,7 @@
 }
 
 body {
-	font-family: 'Anybody Variable', sans-serif;
+	font-family: 'Comfortaa Variable', sans-serif;
 }
 
 .background-gradient {

@@ -3,8 +3,10 @@
 	import { PrismicImage } from '@prismicio/svelte';
 	import clsx from 'clsx';
 
-	import gsap from 'gsap';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { onMount } from 'svelte';
+	gsap.registerPlugin(ScrollTrigger);
 
 	interface Props {
 		headshot: ImageField;
@@ -26,7 +28,13 @@
 				opacity: 1,
 				scale: 1,
 				duration: 1.3,
-				ease: 'power4.out'
+				ease: 'power4.out',
+				scrollTrigger: {
+					trigger: '.avatar',
+					start: 'top center',
+					end: 'bottom center',
+					toggleActions: 'play none none none'
+				}
 			}
 		);
 

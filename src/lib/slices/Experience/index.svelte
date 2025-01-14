@@ -12,7 +12,7 @@
 </script>
 
 <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<Heading tag="h2" size="lg">
+	<Heading tag="h2" size="lg" gradient={true}>
 		{slice.primary.header}
 	</Heading>
 
@@ -21,7 +21,9 @@
 			<Heading tag="h3" size="sm">
 				{item.header}
 			</Heading>
-			<p class="tracking-light mt-1 flex w-fit items-center text-2xl font-semibold text-slate-400">
+			<p
+				class="tracking-light mt-1 w-fit items-center font-semibold text-slate-400 md:flex md:text-2xl"
+			>
 				<span>{item.time}</span>
 				{' '}
 				<span class="text-3xl font-extralight">/</span>

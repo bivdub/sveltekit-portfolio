@@ -2,6 +2,7 @@
 	import '../app.css';
 	import '@fontsource-variable/outfit';
 	import '@fontsource-variable/anybody';
+	import '@fontsource-variable/tourney';
 	import '@fontsource-variable/comfortaa';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
@@ -37,7 +38,7 @@
 
 <div class="background-gradient absolute inset-0 -z-50 max-h-screen"></div>
 <div
-	class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"
+	class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-color-burn"
 ></div>
 
 <Footer settings={data.settings} />

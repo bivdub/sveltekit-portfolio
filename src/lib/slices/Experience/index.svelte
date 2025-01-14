@@ -26,7 +26,7 @@
 			>
 				<span>{item.time}</span>
 				{' '}
-				<span class="text-3xl font-extralight">/</span>
+				<span class="font-extralight md:text-3xl">/</span>
 				{' '}
 				<span>{item.org}</span>
 			</p>

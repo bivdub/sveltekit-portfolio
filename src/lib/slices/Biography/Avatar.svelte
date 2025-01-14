@@ -46,39 +46,25 @@
 			let componentPercent = {
 				x: (e.clientX - componentCenterX) / componentRect.width / 2
 			};
-			let distFromCenterX = 1 - Math.abs(componentPercent.x);
 
-			gsap
-				.timeline({ defaults: { duration: 0.5, overwite: 'auto', ease: 'power3.out' } })
-				.to(
-					'.avatar',
-					{
-						rotation: gsap.utils.clamp(-2, 2, 5 * componentPercent.x)
-					},
-					0
-				)
-				.to(
-					'.highlight',
-					{
-						opacity: distFromCenterX - 0.7,
-						x: -10 + 20 * componentPercent.x
-					},
-					0
-				);
+			gsap.timeline({ defaults: { duration: 0.5, overwite: 'auto', ease: 'power3.out' } }).to(
+				'.avatar',
+				{
+					rotation: gsap.utils.clamp(-2, 2, 5 * componentPercent.x)
+				},
+				0
+			);
 		};
 	});
 </script>
 
 <div class={clsx('relative h-full w-full', classes)} bind:this={component}>
-	<div class="avatar crt aspect-square overflow-hidden rounded-3xl border-2 border-slate-700">
+	<div class="avatar crt aspect-square overflow-hidden rounded-3xl border-2 border-lime-400">
 		<PrismicImage
 			class="avatar-image h-full w-full object-fill"
 			field={headshot}
 			imgixParams={{ q: 90 }}
 		/>
-		<div
-			class="highlight absolute inset-0 w-full scale-110 bg-gradient-to-tr from-transparent via-white to-transparent"
-		></div>
 	</div>
 </div>
 

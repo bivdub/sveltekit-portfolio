@@ -30,16 +30,16 @@
 				>
 					{settings.data.name}
 				</a>
-				<button
+				<!-- <button
 					aria-expanded={open}
 					aria-label="Open Menu"
 					onclick={() => (open = true)}
 					class="block p-2 text-2xl text-slate-800 md:hidden"
 				>
 					<IcSharpMenu />
-				</button>
+				</button> -->
 				<!-- Mobile Nav -->
-				<ul
+				<!-- <ul
 					class={`fixed inset-0 z-50 flex flex-col items-end gap-4 bg-slate-50 pr-4 pt-14 transition-transform duration-300 ease-in-out md:hidden ${open ? 'translate-x-0' : 'translate-x-[100%]'}`}
 				>
 					<li>
@@ -57,15 +57,15 @@
 							<NavBarLink {link} {label} {onLinkClick} type="mobile"></NavBarLink>
 						</li>
 					{/each}
-				</ul>
+				</ul> -->
 				<!-- Desktop Nav -->
-				<ul class="relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
+				<!-- <ul class="relative z-50 hidden flex-row items-center gap-1 bg-transparent py-0 md:flex">
 					{#each settings.data.links as { label, link }}
 						<li>
 							<NavBarLink {link} {label} {onLinkClick} type="desktop"></NavBarLink>
 						</li>
 					{/each}
-				</ul>
+				</ul> -->
 			</div>
 		</div>
 	</nav>

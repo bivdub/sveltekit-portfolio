@@ -484,6 +484,51 @@ type BiographySliceVariation = BiographySliceDefault;
 export type BiographySlice = prismic.SharedSlice<'biography', BiographySliceVariation>;
 
 /**
+ * Item in *ContentIndex → Default → Primary → Projects*
+ */
+export interface ContentIndexSliceDefaultPrimaryProjectsItem {
+	/**
+	 * name field in *ContentIndex → Default → Primary → Projects*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: placeholder
+	 * - **API ID Path**: content_index.default.primary.projects[].name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	name: prismic.KeyTextField;
+
+	/**
+	 * description field in *ContentIndex → Default → Primary → Projects*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.projects[].description
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	description: prismic.KeyTextField;
+
+	/**
+	 * preview field in *ContentIndex → Default → Primary → Projects*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.projects[].preview
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	preview: prismic.ImageField<never>;
+
+	/**
+	 * link field in *ContentIndex → Default → Primary → Projects*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.projects[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+}
+
+/**
  * Primary content in *ContentIndex → Default → Primary*
  */
 export interface ContentIndexSliceDefaultPrimary {
@@ -491,22 +536,11 @@ export interface ContentIndexSliceDefaultPrimary {
 	 * header field in *ContentIndex → Default → Primary*
 	 *
 	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
+	 * - **Placeholder**: placeholder
 	 * - **API ID Path**: content_index.default.primary.header
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	header: prismic.KeyTextField;
-
-	/**
-	 * content type field in *ContentIndex → Default → Primary*
-	 *
-	 * - **Field Type**: Select
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: blog
-	 * - **API ID Path**: content_index.default.primary.content_type
-	 * - **Documentation**: https://prismic.io/docs/field#select
-	 */
-	content_type: prismic.SelectField<'blog' | 'projects', 'filled'>;
 
 	/**
 	 * description field in *ContentIndex → Default → Primary*
@@ -537,6 +571,16 @@ export interface ContentIndexSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	fallback_image: prismic.ImageField<never>;
+
+	/**
+	 * Projects field in *ContentIndex → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: content_index.default.primary.projects[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	projects: prismic.GroupField<Simplify<ContentIndexSliceDefaultPrimaryProjectsItem>>;
 }
 
 /**
@@ -883,6 +927,7 @@ declare module '@prismicio/client' {
 			BiographySliceVariation,
 			BiographySliceDefault,
 			ContentIndexSlice,
+			ContentIndexSliceDefaultPrimaryProjectsItem,
 			ContentIndexSliceDefaultPrimary,
 			ContentIndexSliceVariation,
 			ContentIndexSliceDefault,

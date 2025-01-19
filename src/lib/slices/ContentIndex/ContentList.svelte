@@ -6,7 +6,7 @@
 		type ImageField,
 		type KeyTextField
 	} from '@prismicio/client';
-	import { PrismicLink, PrismicRichText } from '@prismicio/svelte';
+	import { PrismicLink } from '@prismicio/svelte';
 	import type { Action } from 'svelte/action';
 	import IcSharpArrowOutward from '~icons/ic/sharp-arrow-outward';
 	import { gsap } from 'gsap';
@@ -15,7 +15,7 @@
 	gsap.registerPlugin(ScrollTrigger);
 
 	interface Props {
-		items: Content.BlogPostDocument[] | Content.ProjectDocument[];
+		items: Content.ContentIndexSliceDefaultPrimaryProjectsItem[];
 		fallbackImage: ImageField;
 		linkText: KeyTextField;
 	}
@@ -27,7 +27,7 @@
 	let currentIndex: number | undefined = $state();
 	let contentImages = $state(
 		items.map((item) => {
-			const image = isFilled.image(item.data.preview) ? item.data.preview : fallbackImage;
+			const image = isFilled.image(item.preview) ? item.preview : fallbackImage;
 			return asImageSrc(image, { fit: 'crop', width: 220, height: 320, exp: -10 });
 		})
 	);
@@ -100,21 +100,19 @@
 <svelte:window onmousemove={handleMouseMove} />
 
 <ul onmouseleave={onMouseLeave} class="borber-b-slate-100 grid border-b">
-	{#each items as post, index (post.id + index)}
+	{#each items as post, index (post.name + index)}
 		<li class="content-list-item" onmouseenter={() => onMouseEnter(index)} use:onItemEnter={index}>
 			<PrismicLink
-				document={post}
+				field={post.link}
 				class="flex flex-col justify-between border-t border-t-slate-100 py-10 text-slate-200 md:flex-row"
 			>
 				<div class="flex flex-col">
-					<span class="text-3xl font-bold"> {post.data.title}</span>
-					<div class="flex gap-3 text-yellow-400">
-						{#each post.tags as tag}
-							<span class="text-lg font-bold">{tag}</span>
-						{/each}
+					<span class="text-3xl font-bold"> {post.name}</span>
+					<div class="flex gap-3 text-slate-300">
+						{post.description}
 					</div>
 				</div>
-				<span class="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+				<span class="ml-auto flex items-center gap-2 pt-4 text-xl font-medium md:ml-0 md:pt-0">
 					{linkText}
 					<IcSharpArrowOutward />
 				</span>

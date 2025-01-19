@@ -54,7 +54,7 @@
 	this={tag}
 	bind:this={ref}
 	class={clsx(
-		'font-bold leading-tight tracking-tight',
+		'pb-4 font-bold leading-tight tracking-tight',
 		size === 'xxl' && 'text-[clamp(3rem,20vmin,15rem)]',
 		size === 'xl' && 'text-7xl md:text-9xl',
 		size === 'lg' && 'text-6xl md:text-8xl',

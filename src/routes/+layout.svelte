@@ -31,7 +31,7 @@
 	{/if}
 </svelte:head>
 
-<Header settings={data.settings} />
+<!-- <Header settings={data.settings} /> -->
 <main>
 	{@render children?.()}
 </main>

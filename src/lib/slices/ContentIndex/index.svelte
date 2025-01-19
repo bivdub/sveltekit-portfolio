@@ -7,14 +7,13 @@
 
 	interface Props {
 		slice: Content.ContentIndexSlice;
-		items: Content.BlogPostDocument[] | Content.ProjectDocument[];
 	}
 
-	let { slice, items }: Props = $props();
+	let { slice }: Props = $props();
 </script>
 
 <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-	<Heading size="xl" class="mb-8">
+	<Heading size="xl" class="mb-8" gradient={true}>
 		{slice.primary.header}
 	</Heading>
 	{#if isFilled.richText(slice.primary.description)}
@@ -23,7 +22,7 @@
 		</div>
 	{/if}
 	<ContentList
-		{items}
+		items={slice.primary.projects}
 		fallbackImage={slice.primary.fallback_image}
 		linkText={slice.primary.link_text}
 	></ContentList>

@@ -6,6 +6,6 @@
 
 <SliceSimulator  background="#2e2e2e">
 	{#snippet children({ slices })}
-		<SliceZone {slices} {components} />
+		<SliceZone {slices} {                 } />
 	{/snippet}
 </SliceSimulator>

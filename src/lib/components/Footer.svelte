@@ -14,14 +14,14 @@
 
 <Bounded as="footer" class="text-slate-600">
 	<div
-		class="container mx-auto flex mt-20 flex-col items-center justify-between gap-6 py-8 sm:flex-row"
+		class="container mx-auto mt-20 flex flex-col items-center justify-between gap-6 py-8 sm:flex-row"
 	>
 		<div
 			class="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start"
 		>
 			<a
 				href="/"
-				class="text-xl font-extrabold tracking-tighter text-slate-100 transition-color duration-150 hover:text-emerald-400"
+				class="transition-color text-xl font-extrabold tracking-tighter text-slate-100 duration-150 hover:text-emerald-400"
 			>
 				{settings.data.name}
 			</a>
@@ -34,7 +34,7 @@
 				{settings.data.name}
 			</p>
 		</div>
-		<nav class="navigation" aria-label="Footer navigation">
+		<!-- <nav class="navigation" aria-label="Footer navigation">
 			<ul class="flex items-center gap-1">
 				{#each settings.data.links as { link, label }, index}
 					<li>
@@ -52,24 +52,24 @@
 					{/if}
 				{/each}
 			</ul>
-		</nav>
+		</nav> -->
 		<div class="socials flex items-center gap-4 sm:justify-end">
 			{#if isFilled.link(settings.data.github_link)}
 				<PrismicLink
 					field={settings.data.github_link}
-					class="p-2 text-2xl text-slate-300 transform transition-all duration-150 hover:scale-125 hover:text-emerald-500"
+					class="transform p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-emerald-500"
 					aria-label={settings.data.name + ' on GitHub'}
 				>
-					<GithubIcon class="w-6 h-6" />
+					<GithubIcon class="h-6 w-6" />
 				</PrismicLink>
 			{/if}
 			{#if isFilled.link(settings.data.linkedin_link)}
 				<PrismicLink
 					field={settings.data.linkedin_link}
-					class="p-2 text-2xl text-slate-300 transform transition-all duration-150 hover:scale-125 hover:text-emerald-500"
+					class="transform p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-emerald-500"
 					aria-label={settings.data.name + ' on LinkedIn'}
 				>
-					<LinkedinIcon class="w-6 h-6" />
+					<LinkedinIcon class="h-6 w-6" />
 				</PrismicLink>
 			{/if}
 		</div>

@@ -21,7 +21,7 @@ body {
 .background-gradient {
 	position: fixed;
 	background: radial-gradient(circle at right 30%, var(--site-green), transparent 50%),
-		radial-gradient(circle at left 50%, var(--site-purple), transparent 65%),
+		radial-gradient(circle at left 20%, var(--site-purple), transparent 65%),
 		radial-gradient(circle at center bottom, var(--site-blue), transparent 55%);
 }
 

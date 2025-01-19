@@ -4,8 +4,8 @@
 	import { components } from '$lib/slices';
 </script>
 
-<SliceSimulator  background="#2e2e2e">
+<SliceSimulator background="#2e2e2e">
 	{#snippet children({ slices })}
-		<SliceZone {slices} {                 } />
+		<SliceZone {slices} {components} />
 	{/snippet}
 </SliceSimulator>

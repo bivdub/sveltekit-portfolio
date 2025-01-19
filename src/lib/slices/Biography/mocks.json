@@ -19,22 +19,7 @@
 					}
 				]
 			},
-			"button_link": {
-				"key": "abff31a3-dbfb-4c45-98e0-912a948078c6",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"text": "shoot"
-				}
-			},
-			"button_label": {
-				"__TYPE__": "FieldContent",
-				"value": "tape",
-				"type": "Text"
-			},
 			"headshot": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
@@ -52,6 +37,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
